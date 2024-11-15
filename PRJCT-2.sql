@@ -1,32 +1,39 @@
-SELECT E.EMP_NAME, D.DEPT_NAME, M.MANAGER_NAME, P.PROJECT_NAME
-FROM EMPLOYEE E
-LEFT JOIN DEPARTMENT D ON E.DEPT_ID = D.DEPT_ID
-INNER JOIN  MANAGER M ON M.MANAGER_ID = E.MANAGER_ID
-LEFT JOIN PROJECT P ON P.TEAM_MEMBER_ID = E.EMP_ID;
-
-
-SELECT E.EMP_NAME, D.DEPT_NAME 
-FROM EMPLOYEE E
-CROSS JOIN DEPARTMENT D;
-
-CREATE TABLE FAMILY
+CREATE TABLE EMPLOYEE2
 (
-	MEMBER_ID  VARCHAR(20),
-	NAME VARCHAR(100),
-	AGE INT,
-	PARENT_ID VARCHAR(20)
+	EMP_ID  INT,
+	EMP_NAME VARCHAR(50),
+	DEPT_NAME VARCHAR(50),
+	SALARY  INT
 );
 
+INSERT INTO EMPLOYEE2
+(EMP_ID, EMP_NAME, DEPT_NAME, SALARY)
 
-INSERT INTO FAMILY
-(MEMBER_ID, NAME, AGE, PARENT_ID)
-VALUES  ('F1', 'DAVID', '4', 'F5'),
-		('F2', 'CAROL', '10', 'F5'),
-		('F3', 'MICHAEL', '12', 'F5'),
-		('F4', 'JOHNSON', '36', 'NULL'),
-		('F5', 'MARYAM', '40', 'F6'),
-		('F6', 'STEWART', '70', 'NULL' ),
-		('F7', 'ROHAN', '6', 'F4'),
-		('F8', 'ASHA', '8', 'F4');
+VALUES ('101', 'Mohan', 'Admin', '4000'),
+('102', 'Rajkumar', 'HR', '3000'),
+('103', 'Akbar', 'IT', '4000'),
+('104', 'Dorvin', 'Finance', '6500'),
+('105', 'Rohit', 'HR', '3000'),
+('106', 'Rajesh', 'Finance', '5000'),
+('107', 'Suman', 'Admin', '4500'),
+('108', 'Kiran', 'HR', '3200'),
+('109', 'Neha', 'IT', '4600'),
+('110', 'Sunil', 'Finance', '6000'),
+('111', 'Manoj', 'HR', '3100'),
+('112', 'Divya', 'Admin', '4200'),
+('113', 'Vikash', 'IT', '4700'),
+('114', 'Naina', 'Finance', '5800'),
+('115', 'Shyam', 'HR', '3300'),
+('116', 'Geeta', 'Admin', '4400'),
+('117', 'Nikhil', 'IT', '4800'),
+('118', 'Rita', 'Finance', '6300'),
+('119', 'Prakash', 'HR', '3400'),
+('120', 'Meera', 'Admin', '4100'),
+('121', 'Arjun', 'IT', '4900'),
+('122', 'Ravi', 'Finance', '6200'),
+('123', 'Sita', 'HR', '3500'),
+('124', 'Lalit', 'Admin', '4300');
+		
 
-SELECT * FROM FAMILY
+
+SELECT * FROM EMPLOYEE2;
